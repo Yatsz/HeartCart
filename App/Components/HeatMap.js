@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
 import MapView, { PROVIDER_GOOGLE, Heatmap } from 'react-native-maps';
-import homelessData from './assets/Homeless_Data.json'; // Import JSON data
+import homelessData from '../assets/Homeless_Data.json'; // Import JSON data
 
 const HeatMap = () => {
   const [points, setPoints] = useState([]);
