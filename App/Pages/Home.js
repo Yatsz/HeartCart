@@ -101,24 +101,24 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   icon: {
-    marginTop: 64, // 38 from the top of the screen
-    alignSelf: 'flex-start', // Align to the left
+    marginTop: 64,
+    alignSelf: 'flex-start', 
   },
   search: {
-    marginTop: 16, // 38 from the top of the screen
-    alignSelf: 'flex-start', // Align to the left
+    marginTop: 16, 
+    alignSelf: 'flex-start', 
     width: '100%',
-    borderColor: 'black', // Color of the border
+    borderColor: 'black', 
     borderWidth: 0.7, 
   },
   text: {
-    marginTop: 16, // 38 from the top of the screen
-    alignSelf: 'flex-start', // Align to the left
+    marginTop: 16, 
+    alignSelf: 'flex-start', 
     color: 'gray',
     fontSize: 16,
   },
   card: {
-    alignSelf: 'flex-start', // Align to the left
+    alignSelf: 'flex-start', 
     width: '100%',
   }
 });
