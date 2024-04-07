@@ -34,7 +34,7 @@ const Profile = ({}) => {
     <View style={styles.profileImageContainer}>
       <View style={styles.profileImageShadow}>
         <Image
-          source={require('../assets/person2.jpeg')}
+          source={require('../assets/person3.png')}
           style={styles.profileImage}
         />
       </View>

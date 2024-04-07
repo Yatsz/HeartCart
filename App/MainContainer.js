@@ -4,7 +4,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import IonIcons from 'react-native-vector-icons/Ionicons'
-import { User } from 'firebase/auth';
 import { onAuthStateChanged } from "firebase/auth";
 import { FIREBASE_AUTH } from "./FirebaseConfig"
 
@@ -31,7 +30,6 @@ export default function MainContainer() {
             setUser(currentUser);
         });
 
-        // Cleanup on component unmount
         return () => unsubscribe();
     }, []);
 
