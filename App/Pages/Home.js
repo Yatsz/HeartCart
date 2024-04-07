@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import { View, Text, StyleSheet, FlatList, Animated } from 'react-native';
 import { SvgXml } from 'react-native-svg';
 import { Searchbar, DefaultTheme } from 'react-native-paper';
 import HomeCard from '../Components/HomeCard';
@@ -19,27 +19,56 @@ const theme = {
       ...DefaultTheme.colors.elevation,
       level3: 'white',
     },
-    primary: '#D91400f',
+    primary: '#D91400',
     onSurfaceVariant: 'black',
     onSurface: 'gray', 
     outline: 'black',
   },
 };
 
+const AnimatedHomeCard = ({ item, index }) => {
+  const position = useRef(new Animated.Value(50)).current;
+  const opacity = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    Animated.parallel([
+      Animated.timing(position, {
+        toValue: 0,
+        duration: 700,
+        useNativeDriver: true,
+        delay: index * 100,
+      }),
+      Animated.timing(opacity, {
+        toValue: 1,
+        duration: 600,
+        useNativeDriver: true,
+        delay: index * 100,
+      }),
+    ]).start();
+  }, []);
+
+  return (
+    <Animated.View style={[styles.animatedContainer, { opacity, transform: [{ translateY: position }] }]}>
+      <HomeCard
+            title={item.title}
+            image={{ uri: item.image }}
+            distance={item.distance}
+            time={item.time}
+            deliveries={item.deliveries}
+            rating={item.rating}
+          />
+    </Animated.View>
+  );
+};
+
 const Home = ({}) => {
   const [searchQuery, setSearchQuery] = React.useState('');
+  
+  const renderItem = ({ item, index }) => {
+    return <AnimatedHomeCard item={item} index={index} />;
+  };
 
-  const renderItem = ({ item }) => (
-    <HomeCard
-      title={item.title}
-      image={{ uri: item.image }}
-      distance={item.distance}
-      time={item.time}
-      deliveriesLeft={item.deliveriesLeft}
-      rating={item.rating}
-    />
-  );
-
+  
   return (
     <View style={styles.container}>
       <SvgXml xml={svgIcon} width="32" height="32" style={styles.icon} />
@@ -51,11 +80,11 @@ const Home = ({}) => {
         iconColor="gray"
         theme={theme} 
       />
-      <Text style={styles.text}>89 results</Text>
+      <Text style={styles.text}>5 results</Text>
       <FlatList
         data={data}
         renderItem={renderItem}
-        keyExtractor={(index) => String(index)}
+        keyExtractor={(item, index) => String(index)}
       />
       
     </View>
@@ -67,6 +96,9 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 32, // Padding for everything left and right
     backgroundColor: '#FFF',
+  },
+  animatedContainer: {
+    flex: 1,
   },
   icon: {
     marginTop: 64, // 38 from the top of the screen
