@@ -34,14 +34,14 @@ const Profile = ({}) => {
     <View style={styles.profileImageContainer}>
       <View style={styles.profileImageShadow}>
         <Image
-          source={require('../assets/person.png')}
+          source={require('../assets/person2.jpeg')}
           style={styles.profileImage}
         />
       </View>
     </View>
 
      
-      <Text style={styles.name}>Elena Blake</Text>
+      <Text style={styles.name}>Daniel Kim</Text>
       <Text style={styles.description}>Hi there, I’m a SF State student!</Text>
       
   <View style={styles.chartContainer}>
