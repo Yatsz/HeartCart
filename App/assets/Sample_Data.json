@@ -1,0 +1,26 @@
+[
+    {
+        "image": "../assets/foodBankOne.png",
+        "title": "SF Scottish Rite Masonic Center",
+        "distance": "1.4",
+        "time": "7 minutes",
+        "deliveries": "6",
+        "rating": 5
+    },
+    {
+        "image": "../assets/foodBank2.png",
+        "title": "Edgewood Food Bank",
+        "distance": "2",
+        "time": "9 minutes",
+        "deliveries": "15",
+        "rating": 5
+    },
+    {
+        "image": "../assets/foodBank3.png",
+        "title": "SF-Marin Food Bank",
+        "distance": "8.1",
+        "time": "16 minutes",
+        "deliveries": "9",
+        "rating": 5
+    }
+]
