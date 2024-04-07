@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "798551774338",
+    "project_id": "heartcart-7e1b9",
+    "storage_bucket": "heartcart-7e1b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798551774338:android:ef2069f2bf53a60265509b",
+        "android_client_info": {
+          "package_name": "com.daniel.heartcart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaX2xYn_waBHfoh0WLLzCLVUtMQnUwAak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
