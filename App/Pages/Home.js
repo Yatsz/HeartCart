@@ -34,13 +34,13 @@ const AnimatedHomeCard = ({ item, index }) => {
     Animated.parallel([
       Animated.timing(position, {
         toValue: 0,
-        duration: 700,
+        duration: 1000,
         useNativeDriver: true,
         delay: index * 100,
       }),
       Animated.timing(opacity, {
         toValue: 1,
-        duration: 600,
+        duration: 900,
         useNativeDriver: true,
         delay: index * 100,
       }),
