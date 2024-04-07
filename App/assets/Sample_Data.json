@@ -1,6 +1,6 @@
 [
     {
-        "image": "../assets/foodBankOne.png",
+        "image": "https://marinmagazine.com/wp-content/uploads/2023/07/sf-marin-food-bank-san-rafael-@twitter-e1688765354205-770x492.png",
         "title": "SF Scottish Rite Masonic Center",
         "distance": "1.4",
         "time": "7 minutes",
@@ -8,7 +8,7 @@
         "rating": 5
     },
     {
-        "image": "../assets/foodBank2.png",
+        "image": "https://patch.com/img/cdn20/users/23958596/20211001/113148/styles/patch_image/public/-dsc4594___01112906441.jpg",
         "title": "Edgewood Food Bank",
         "distance": "2",
         "time": "9 minutes",
@@ -16,7 +16,7 @@
         "rating": 5
     },
     {
-        "image": "../assets/foodBank3.png",
+        "image": "https://www.som.com/wp-content/uploads/2021/08/NFN_2020252_N15_large-scaled.jpg",
         "title": "SF-Marin Food Bank",
         "distance": "8.1",
         "time": "16 minutes",

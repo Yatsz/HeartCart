@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, FlatList } from 'react-native';
 import { SvgXml } from 'react-native-svg';
 import { Searchbar, DefaultTheme } from 'react-native-paper';
+import HomeCard from '../Components/HomeCard';
+import data from '../assets/Sample_Data.json'
 
 
 const svgIcon = `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,6 +29,17 @@ const theme = {
 const Home = ({}) => {
   const [searchQuery, setSearchQuery] = React.useState('');
 
+  const renderItem = ({ item }) => (
+    <HomeCard
+      title={item.title}
+      image={{ uri: item.image }}
+      distance={item.distance}
+      time={item.time}
+      deliveriesLeft={item.deliveriesLeft}
+      rating={item.rating}
+    />
+  );
+
   return (
     <View style={styles.container}>
       <SvgXml xml={svgIcon} width="32" height="32" style={styles.icon} />
@@ -39,6 +52,11 @@ const Home = ({}) => {
         theme={theme} 
       />
       <Text style={styles.text}>89 results</Text>
+      <FlatList
+        data={data}
+        renderItem={renderItem}
+        keyExtractor={(index) => String(index)}
+      />
       
     </View>
   );
@@ -66,6 +84,10 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start', // Align to the left
     color: 'gray',
     fontSize: 16,
+  },
+  card: {
+    alignSelf: 'flex-start', // Align to the left
+    width: '100%',
   }
 });
 

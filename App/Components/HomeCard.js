@@ -10,12 +10,14 @@ const HomeCard = ({ title, image, distance, time, deliveries, rating }) => {
     <TouchableOpacity style={styles.card}>
       <Image source={image} style={styles.cardImage} />
       <View style={styles.cardContent}>
-        <Text style={styles.cardTitle}>{title}</Text>
-        <Text style={styles.cardTimeDistance}>{`${time} · ${distance} from you`}</Text>
-        <View style={styles.starRating}>
+        <View style={styles.titleRow}>
+          <Text style={styles.cardTitle}>{title}</Text>
           {renderStars()}
         </View>
-        <Text style={styles.deliveriesLeft}>{`${deliveries} delivers left`}</Text>
+        <View style={styles.detailRow}>
+          <Text style={styles.cardTimeDistance}>{`${time} ⋅ ${distance} from you`}</Text>
+          <Text style={styles.deliveriesLeft}>{`${deliveries} deliveries left`}</Text>
+        </View>
       </View>
     </TouchableOpacity>
   );
@@ -23,40 +25,49 @@ const HomeCard = ({ title, image, distance, time, deliveries, rating }) => {
 
 const styles = StyleSheet.create({
   card: {
-    borderRadius: 8,
-    overflow: 'hidden',
+    marginTop: 16,
+    borderRadius: 20,
     backgroundColor: 'white',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-    elevation: 2,
-    margin: 10,
+    shadowColor: '#000000', // Black color
+    shadowOffset: { width: 0, height: 4 }, // Y offset of 4, no X offset
+    shadowRadius: 4, // Blur of 4
+    shadowOpacity: 0.25, // 25% opacity
+    width: '100%',
+    height: 200,
+    marginBottom: 16,
   },
   cardImage: {
+    borderTopLeftRadius: 20, 
+    borderTopRightRadius: 20,
     width: '100%',
-    height: 150, // Set a fixed height or make it dynamic depending on your needs
+    height: 128, 
   },
   cardContent: {
-    padding: 10,
+    padding: 15,
   },
   cardTitle: {
     fontSize: 16,
     fontWeight: 'bold',
-    marginBottom: 5,
   },
   cardTimeDistance: {
-    fontSize: 14,
+    fontSize: 12,
     color: 'gray',
-    marginBottom: 5,
   },
-  starRating: {
-    // Additional styles for star rating if needed
+  titleRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  detailRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 4, // Add a small margin at the top for spacing
   },
   deliveriesLeft: {
-    fontSize: 14,
-    fontWeight: 'bold',
-    marginTop: 5,
+    fontSize: 12,
+    color: 'gray',
+   
   },
   // Add more styles if necessary
 });
