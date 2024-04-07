@@ -16,7 +16,8 @@
     ],
     "ios": {
       "googleServicesFile": "./GoogleService-Info.plist",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.daniel.heartcart"
     },
     "android": {
       "googleServicesFile": "google-services.json",
@@ -35,9 +36,14 @@
         {
           "ios": {
             "useFrameworks": "static"
-         }
+          }
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ac47c822-0e4a-4a57-8da2-f58450c1e34a"
+      }
+    }
   }
 }

@@ -116,9 +116,8 @@ const styles = StyleSheet.create({
         marginBottom: 32,
     },
     buttonContent: {
-        height: '100%', // Make content fill the button height
-        // If needed, adjust padding here, e.g., paddingTop and paddingBottom
-      },
+        height: '100%', 
+    },
     buttonLabel: {
         fontSize: 20,
         fontWeight: 'bold',

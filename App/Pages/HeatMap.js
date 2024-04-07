@@ -15,6 +15,8 @@ const HeatMap = () => {
     setPoints(parsedPoints);
   }, []);
 
+
+
   return (
     <View style={styles.container}>
       <MapView
@@ -42,12 +44,15 @@ const HeatMap = () => {
 
 const styles = StyleSheet.create({
   container: {
+   
     ...StyleSheet.absoluteFillObject,
     justifyContent: 'flex-end',
     alignItems: 'center',
+    
   },
   map: {
     ...StyleSheet.absoluteFillObject,
+    
   },
 });
 

@@ -5,7 +5,10 @@
         "distance": "1.4 miles",
         "time": "7 minutes",
         "deliveries": "6",
-        "rating": 5
+        "rating": 5,
+        "map": "https://maps.apple.com/?address=2850%2019th%20Ave,%20San%20Francisco,%20CA%20%2094132,%20United%20States&auid=12937860681586771159&ll=37.735227,-122.474615&lsp=9902&q=The%20San%20Francisco%20Scottish%20Rite%20Masonic%20Center",
+        "description": "Provides an opportunity for men, women, and youth to enjoy fellowship, serve communities, and deepen their understanding of life.",
+        "address": "2850 19th avenue"
     },
     {
         "image": "https://patch.com/img/cdn20/users/23958596/20211001/113148/styles/patch_image/public/-dsc4594___01112906441.jpg",
@@ -13,7 +16,10 @@
         "distance": "2.0 miles",
         "time": "9 minutes",
         "deliveries": "15",
-        "rating": 3
+        "rating": 3,
+        "map": "https://maps.apple.com/?address=1801%20Vicente%20St,%20San%20Francisco,%20CA%20%2094116,%20United%20States&auid=1599925689073103455&ll=37.738532,-122.486132&lsp=9902&q=Edgewood",
+        "description": "Provides an opportunity for men, women, and youth to enjoy fellowship, serve communities, and deepen their understanding of life.",
+        "address": "1801 Vicente St"
     },
     {
         "image": "https://foodwise.org/wp-content/uploads/2023/01/demo_volunteers_baraghani.jpg",
@@ -21,7 +27,10 @@
         "distance": "3.4 miles",
         "time": "16 minutes",
         "deliveries": "6",
-        "rating": 5
+        "rating": 5,
+        "map": "https://maps.apple.com/?address=1525%20Waller%20St,%20San%20Francisco,%20CA%20%2094117,%20United%20States&auid=10103290214891923515&ll=37.768459,-122.449158&lsp=9902&q=Haight%20Ashbury%20Food%20Program",
+        "description": "Provide food and referral services to those in need while fostering a sense of belonging and self worth for all involved.",
+        "address": "1525 Waller St"
     },
     {
         "image": "https://s3.amazonaws.com/cms.ipressroom.com/231/files/20236/64ada78f3d6332d49c814341_Feeding+America+Milwaukee+Food+Sort+15.31.23/Feeding+America+Milwaukee+Food+Sort+15.31.23_edaa51bd-4ed9-4ede-ab5a-89572e54be3f-prv.jpg",
@@ -29,7 +38,10 @@
         "distance": "4.5 miles",
         "time": "16 minutes",
         "deliveries": "12",
-        "rating": 4
+        "rating": 4,
+        "map": "https://maps.apple.com/?address=701%20Alabama%20St,%20San%20Francisco,%20CA%20%2094110,%20United%20States&auid=11656787496452153625&ll=37.760021,-122.411442&lsp=9902&q=Mission%20Food%20Hub",
+        "description": "Provide culturally appropriate groceries for families who were affected by COVID-19. We provide 500 families with grocery bags weekly.",
+        "address": "701 Alabama St"
     },
     {
         "image": "https://www.som.com/wp-content/uploads/2021/08/NFN_2020252_N15_large-scaled.jpg",
@@ -37,6 +49,9 @@
         "distance": "8.2 miles",
         "time": "18 minutes",
         "deliveries": "15",
-        "rating": 5
+        "rating": 5,
+        "map": "https://maps.apple.com/?address=1050%20Marin%20St,%20San%20Francisco,%20CA%20%2094124,%20United%20States&auid=2110134974256166824&ll=37.749476,-122.386666&lsp=9902&q=SF.Marin%20Food%20Bank",
+        "description": "Our mission is to end hunger in San Francisco and Marin. We address hunger head-on - from our food pantry network delivering groceries.",
+        "address": "1050 Marin St"
     }
 ]

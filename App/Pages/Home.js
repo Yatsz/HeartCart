@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, FlatList, Animated } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Animated , TouchableOpacity} from 'react-native';
 import { SvgXml } from 'react-native-svg';
 import { Searchbar, DefaultTheme } from 'react-native-paper';
 import HomeCard from '../Components/HomeCard';
@@ -49,6 +49,7 @@ const AnimatedHomeCard = ({ item, index }) => {
 
   return (
     <Animated.View style={[styles.animatedContainer, { opacity, transform: [{ translateY: position }] }]}>
+      <TouchableOpacity style={styles.card}>
       <HomeCard
             title={item.title}
             image={{ uri: item.image }}
@@ -56,16 +57,27 @@ const AnimatedHomeCard = ({ item, index }) => {
             time={item.time}
             deliveries={item.deliveries}
             rating={item.rating}
+            map={item.map}
+            address={item.address}
+            description={item.description}
           />
+        </TouchableOpacity>
     </Animated.View>
+    
   );
 };
 
 const Home = ({}) => {
   const [searchQuery, setSearchQuery] = React.useState('');
-  
+
   const renderItem = ({ item, index }) => {
-    return <AnimatedHomeCard item={item} index={index} />;
+
+    return (
+      <AnimatedHomeCard
+        item={item}
+        index={index}
+      />
+    )
   };
 
   

@@ -1,13 +1,22 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-const HomeCard = ({ title, image, distance, time, deliveries, rating }) => {
+
+const HomeCard = ({title, address, image, distance, time, description, deliveries, rating, map}) => {
   const renderStars = () => {
     return <Text>{'★'.repeat(rating)}{'☆'.repeat(5 - rating)}</Text>;
   };
 
+  const navigation = useNavigation(); // Get the navigation object
+
+  // Define onPress handler
+  const handlePress = () => {
+    navigation.navigate('Info', {title, address, image, distance, time, description, deliveries, rating, map}); // Use actual data you want to pass
+  };
+
   return (
-    <TouchableOpacity style={styles.card}>
+    <TouchableOpacity style={styles.card} onPress={handlePress} >
       <Image source={image} style={styles.cardImage} />
       <View style={styles.cardContent}>
         <View style={styles.titleRow}>

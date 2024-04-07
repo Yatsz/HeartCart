@@ -11,6 +11,7 @@ import Home from './Pages/Home';
 import HeatMap from './Pages/HeatMap';
 import Profile from './Pages/Profile';
 import Login from './Pages/Login';
+import Info from './Pages/Info';
 
 const homeName = "Home";
 const mapName = "Map";
@@ -20,6 +21,18 @@ const Tab = createBottomTabNavigator();
 
 const Stack = createNativeStackNavigator();
 
+const HomeStack = createNativeStackNavigator();
+const HomeStackNavigator = () => {
+  return (
+    <HomeStack.Navigator
+    screenOptions={({route}) => ({
+        headerShown: false,
+    })}>
+      <HomeStack.Screen name="HomeTab" component={Home} options={{ headerShown: false }} />
+      <HomeStack.Screen name="Info" component={Info} />
+    </HomeStack.Navigator>
+  );
+};
 
 export default function MainContainer() {
     const [user, setUser] = React.useState(null);
@@ -55,7 +68,7 @@ export default function MainContainer() {
                         tabBarStyle: { height: 72 }
                     })}
                 >
-                    <Tab.Screen name={homeName} component={Home} />
+                    <Tab.Screen name={homeName} component={HomeStackNavigator} />
                     <Tab.Screen name={mapName} component={HeatMap} />
                     <Tab.Screen name={profileName} component={Profile} />
                 </Tab.Navigator>
